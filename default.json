@@ -1,0 +1,10 @@
+{
+    "commandList": {
+        "stuExamQuery": {
+            "isAllowed": true
+        },
+        "QuestionExportNew": {
+            "isAllowed": true
+        }
+    }
+}

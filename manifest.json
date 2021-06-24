@@ -1,0 +1,61 @@
+{
+	"name": "Super Star Learning Helper",
+	"description": "对学习通的功能进行拓展，包括题目的导出、考试成绩查看等等",
+	"version": "1.0.1",
+	"manifest_version": 2,
+	"author": "RouterCheng",
+	"icons": {
+		"16": "ico/16.png",
+		"32": "ico/32.png",
+		"48": "ico/48.png",
+		"128": "ico/128.png"
+	},
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_icon": "ico/ico.png",
+		"default_title": "超星学习通学习情况详情"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*/exam-stastics/stu-index*"
+			],
+			"js": [
+				"./js/jquery.js",
+				"./js/stuExam.js",
+				"./js/start.js"
+			],
+			"run_at": "document_end"
+		},
+		{
+			"matches": [
+				"*://*/mooc2/work/view*",
+				"*://*/exam/test/reVersionPaperMarkContentNew*"
+			],
+			"js": [
+				"./js/jquery.js",
+				"./js/anime.min.js",
+				"./js/questionParse.js",
+				"./js/loading.js",
+				"./js/workExportNew.js",
+				"./js/start.js"
+			],
+			"run_at": "document_end"
+		}
+	],
+	"background": {
+		"scripts": [
+			"./js/background.js"
+		]
+	},
+	"permissions": [
+		"http://*/*",
+		"https://*/*",
+		"https://mooc.xxcheng.top/*",
+		"*://*.chaoxing.com/*",
+		"storage",
+		"cookies",
+		"tabs"
+	],
+	"homepage_url": "https://mooc.xxcheng.top"
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Super Star Learning Helper Page</title>
+	<link rel="stylesheet" type="text/css" href="./css/popup.css" />
+	<link rel="stylesheet" href="./css/helperBox.css">
+	<script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/anime.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/md5.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/coco-modal.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/questionParse.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+	<div id="wait" style="margin: 15px 10px;">
+		<p style="font-size: 24px;">Hi,请稍等一会儿，正在加载中哦......</p>
+	</div>
+	<div id="mainBox">
+		<div id="userBox" style="display: none;">
+			<div class="user-head">
+				<img class="user-img" src="http://photo.chaoxing.com/photo_80.jpg" alt="用户头像" width="80" height="80">
+				<div class="head-right">
+					<p class="head-text">
+						<span class="head-title">姓名：</span>
+						<span class="user-name user-head-font">***</span>
+					</p>
+					<p class="head-text">
+						<span class="head-title">学号：</span>
+						<span class="user-id user-head-font">***</span>
+					</p>
+					<p class="head-text">
+						<span class="head-title">手机：</span>
+						<span class="user-phone user-head-font">***</span>
+					</p>
+				</div>
+			</div>
+			<div class="panel">
+				<div class="allowSelect" id="notice" style="padding: 15px;color: #000;opacity:1;"></div>
+			</div>
+			<ul class="course-list"></ul>
+			<p class="buttonBox" id="backButton" style="display: none;">返回</p>
+			<ul class="exam-list" style="display: none;"></ul>
+			<ul class="exam-export-list" style="display: none;"></ul>
+			<ul class="work-export-list" style="display: none;"></ul>
+		</div>
+	</div>
+	<script src="./js/popup.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
